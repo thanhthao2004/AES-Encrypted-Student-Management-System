@@ -7,16 +7,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./base.css">
     <link rel="stylesheet" href="./main.css">
-    <title></title>
+    <title>Document</title>
 </head>
 <body>
-    <!-- Button to trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmModal">
-        Mở Thông Báo
+    <!-- Button to trigger modal Lỗi! Không thể lưu-->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#LuuLoi">
+        Lỗi!Không thể lưu
     </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="confirmModal" tabindex="-1" aria-hidden="true">
+    <!-- Modal Lỗi! Không thể lưu-->
+    <div class="modal fade" id="LuuLoi" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header border-0 justify-content-center">
@@ -24,11 +23,27 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
-                    <p class="fw-bold">Bạn có chắc chắn xóa thông tin không?</p>
+                        <p class="fw-bold">Lỗi! Không thể lưu</p>
                 </div>
-                <div class="modal-footer justify-content-around justify-content-center">
-                    <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Hủy</button>
-                    <button type="button" class="btn btn-warning">Xác nhận</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Button to trigger modal Lưu thông tin thành công-->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#LuuThanhcong">
+       Lưu thông tin thành công
+    </button>
+    <!-- Modal Lỗi! Lưu thông tin thành công-->
+    <div class="modal fade" id="LuuThanhcong" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 justify-content-center">
+                    <h5 class="modal-title fw-bold">Thông báo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                        <p class="fw-bold">Lưu thông tin thành công</p>
                 </div>
             </div>
         </div>

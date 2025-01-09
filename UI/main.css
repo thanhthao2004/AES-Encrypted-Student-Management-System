@@ -37,7 +37,9 @@
 }
 
 .btn-close::before {
-    content: '✕';
+    justify-content: center;
+    content : 'X';
+    font-size:large;
     color: white;
     position: absolute;
     top: 50%;
@@ -85,6 +87,10 @@
 .modal-footer {
     border-top: none;
     padding: 24px;
+}
+.modal-TB{
+    max-width: 600px; 
+    max-height: 400px;
 }
 
 @media (max-width: 992px) {
