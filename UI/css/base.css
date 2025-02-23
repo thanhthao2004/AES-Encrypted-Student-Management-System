@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    font-family: 'Roboto', 'sans-serif';
+}
+
+header {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+/* Tùy chỉnh sidebar */
+.sidebar {
+    height: 90vh;
+    background: #0b1a3b; /* Màu xanh đậm */
+    padding: 15px;
+    top: 0;
+    left: 0;
+}
+
+.sidebar .brand {
+    background: #f1b500; /* Màu vàng */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.menu-item {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-size: 1.6rem;
+}
+
+.menu-item:hover, .menu-item.active {
+    background: #f1b500; /* Màu vàng khi active */
+    color: black;
+}
+
+.menu-item i {
+    margin-right: 10px;
+}
+
+.toggle-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+}
+
+/* Ẩn sidebar trên mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+}

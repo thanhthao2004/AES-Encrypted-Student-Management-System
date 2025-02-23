@@ -5,13 +5,17 @@
     text-transform: uppercase;
 }
 
+.logo-name, .user-name {
+    margin-bottom: 0;
+}
+
 .user,
 .notification {
     font-size: 2.5rem;
 }
 
 .user-name {
-    margin-right: 1.2rem;
+    margin-left: 1.2rem;
 }
 
 .user-future {
