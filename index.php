@@ -17,7 +17,6 @@
     <title>Hệ thống quản lý sinh viên</title>
 </head>
 <body>
-
     <div class="container-fluid">
         <!-- Header -->
         <header class="container-fluild d-flex justify-content-center">
@@ -41,22 +40,9 @@
         <!-- Main content -->
         <main class="container-fluid row">
             <!-- Sidebar -->
-            <div class="sidebar col-2" id="sidebar">
-                <div class="brand">Nguyen Thi Ngoc Bich</div>
-
-                <a href="#" class="menu-item active">
-                    <i class="fas fa-user"></i> Sinh viên
-                </a>
-                <a href="#" class="menu-item">
-                    <i class="fas fa-file-alt"></i> Lớp học
-                </a>
-                <a href="#" class="menu-item">
-                    <i class="fas fa-database"></i> Điểm số
-                </a>
-                <a href="#" class="menu-item">
-                    <i class="fas fa-book"></i> Môn học
-                </a>
-            </div>
+            <?php 
+                include("View/Menu.php");
+            ?>
 
             <?php 
                 include("View/Section.php");
