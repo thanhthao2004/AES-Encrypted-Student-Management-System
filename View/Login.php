@@ -35,39 +35,39 @@
 <body>
     <div class="card">
         <h3 class="text-center text-dark fw-bold" id="form-title">Đăng nhập</h3>
-        <form id="login-form">
+        <form id="login-form" method="POST">
             <div class="mb-3">
                 <label class="form-label">Tên đăng nhập</label>
-                <input type="text" class="form-control" placeholder="Nhập tên đăng nhập" required>
+                <input type="text" class="form-control" name="txtUserName" placeholder="Nhập tên đăng nhập" required>
             </div>
             <div class="mb-3">
                 <label class="form-label">Mật khẩu</label>
-                <input type="password" class="form-control" placeholder="Nhập mật khẩu" required>
+                <input type="password" class="form-control" name="txtPassword" placeholder="Nhập mật khẩu" required>
             </div>
-            <button type="submit" class="btn btn-warning w-100 fw-bold">Đăng nhập</button>
+            <button type="submit" class="btn btn-warning w-100 fw-bold" name="btnLogin">Đăng nhập</button>
             <p class="text-center mt-3">
                 Chưa có tài khoản? <a href="#" class="text-primary fw-bold" id="toggle-form">Đăng ký</a>
             </p>
         </form>
 
-        <form id="register-form" class="d-none">
+        <form id="register-form" class="d-none" method="POST">
             <div class="mb-3">
                 <label class="form-label">Họ và Tên</label>
-                <input type="text" class="form-control" placeholder="Nhập họ và tên" required>
+                <input type="text" class="form-control" name="txtName" placeholder="Nhập họ và tên" required>
             </div>
             <div class="mb-3">
                 <label class="form-label">Tên đăng nhập</label>
-                <input type="text" class="form-control" placeholder="Nhập tên đăng nhập" required>
+                <input type="text" class="form-control" name="txtUserName" placeholder="Nhập tên đăng nhập" required>
             </div>
             <div class="mb-3">
                 <label class="form-label">Mật khẩu</label>
-                <input type="password" class="form-control" placeholder="Nhập mật khẩu" required>
+                <input type="password" class="form-control" name="txtPassword" placeholder="Nhập mật khẩu" required>
             </div>
             <div class="mb-3">
                 <label class="form-label">Xác nhận mật khẩu</label>
                 <input type="password" class="form-control" placeholder="Nhập lại mật khẩu" required>
             </div>
-            <button type="submit" class="btn btn-warning w-100 fw-bold">Đăng ký</button>
+            <button type="submit" class="btn btn-warning w-100 fw-bold" name="btnRegis">Đăng ký</button>
             <p class="text-center mt-3">
                 Đã có tài khoản? <a href="#" class="text-primary fw-bold" id="toggle-form-back">Đăng nhập</a>
             </p>
@@ -89,5 +89,19 @@
             document.getElementById('form-title').innerText = "Đăng nhập";
         });
     </script>
+    <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['btnLogin'])) {
+            include("../Controller/cUser.php");
+            $p = new cUser();
+            $p-> login($_REQUEST["txtUserName"], $_REQUEST["txtPassword"]);
+        }
+    ?>
+    <?php
+        if(isset($_POST["btnRegis"])){
+            include("../Controller/cUser.php");
+            $p = new cUser();
+            $p -> register($_POST["txtName"], $_POST["txtUserName"], $_POST["txtPassword"]);
+        }
+    ?>
 </body>
 </html>
