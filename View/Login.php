@@ -37,8 +37,8 @@
         <h3 class="text-center text-dark fw-bold" id="form-title">Đăng nhập</h3>
         <form id="login-form">
             <div class="mb-3">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control" placeholder="Nhập email" required>
+                <label class="form-label">Tên đăng nhập</label>
+                <input type="text" class="form-control" placeholder="Nhập tên đăng nhập" required>
             </div>
             <div class="mb-3">
                 <label class="form-label">Mật khẩu</label>
@@ -56,8 +56,8 @@
                 <input type="text" class="form-control" placeholder="Nhập họ và tên" required>
             </div>
             <div class="mb-3">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control" placeholder="Nhập email" required>
+                <label class="form-label">Tên đăng nhập</label>
+                <input type="text" class="form-control" placeholder="Nhập tên đăng nhập" required>
             </div>
             <div class="mb-3">
                 <label class="form-label">Mật khẩu</label>
