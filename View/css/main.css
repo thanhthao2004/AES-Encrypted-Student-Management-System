@@ -1,0 +1,117 @@
+.logo-name {
+    font-size: 4rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.logo-name, .user-name {
+    margin-bottom: 0;
+}
+
+.user,
+.notification {
+    font-size: 2.5rem;
+}
+
+.user-name {
+    margin-left: 1.2rem;
+}
+
+.user-future {
+    margin-top: -6px;
+}
+
+.notification {
+    margin-top: -6px;
+}
+.modal-content {
+    border: 2px solid #F3B95F !important;
+    border-radius: 16px !important;
+}
+
+.btn-close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    background-color: #14142B;
+    opacity: 1;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.btn-close::before {
+    justify-content: center;
+    content : 'X';
+    font-size:large;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-dialog {
+    max-width: 600px; 
+    max-height: 300px;/* Tăng chiều rộng tối đa */
+}
+
+.modal-title {
+    color: #08183A;
+    font-size: 32px !important;
+    padding-top: 20px;
+}
+
+.modal-body p {
+    color: #08183A;
+    font-size: 30px !important;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.btn {
+    min-width: 160px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-outline-warning {
+    border: 2px solid #F2BA1D;
+    color: #F2BA1D;
+}
+
+.btn-warning {
+    background-color: #F3B95F;
+    border-color: #F3B95F;
+    color: white;
+}
+
+.modal-footer {
+    border-top: none;
+    padding: 24px;
+}
+.modal-TB{
+    max-width: 600px; 
+    max-height: 400px;
+}
+
+.btn-custom-large {
+    padding: 1rem 2rem;
+    font-size: 1.9rem;
+    font-weight: bold;
+    height: 50px;
+}
+
+@media (max-width: 992px) {
+    .modal-dialog {
+        max-width: 95% !important;
+        margin: 1rem auto;
+    }
+            
+    .modal-title,
+    .modal-body p {
+        font-size: 24px !important;
+    }
+}
