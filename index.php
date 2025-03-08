@@ -31,7 +31,7 @@
                         <p class="user-name">Nguyễn Thị Ngọc Bích</p>
                     </div>
                     <div class="notification">
-                        <a href=""><i class="fa-solid fa-right-from-bracket"></i></a>
+                        <a href="index.php?act=logout"><i class="fa-solid fa-right-from-bracket"></i></a>
                     </div>
                 </div>
             </div>
