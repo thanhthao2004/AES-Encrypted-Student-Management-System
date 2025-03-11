@@ -1,6 +1,5 @@
-<?php 
-    session_start();
-
+<?php
+session_start();
     $act = isset($_GET['act']) ? $_GET['act'] : 'danhSachSV';
 
     switch($act) {
