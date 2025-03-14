@@ -33,13 +33,14 @@
             $result = $p->deleteStudent($mssv);
         
             if ($result == 1) {
-                header("Location: index.php?act=danhSachSV&status=success"); // Xóa thành công
-                header("Location: index.php");
-            } else if ($result == 2) {
-                header("Location: index.php?act=danhSachSV&status=not_exist"); // MSSV không tồn tại
+                echo "<script>
+                showAlert('Xóa sinh viên thành công!', 'warning');
+                setTimeout(2000);
+            </script>"; // Xóa thành công
             } else {
                 header("Location: index.php?act=danhSachSV&status=error_db"); // Lỗi CSDL
             }
+            header('Location: index.php');
             exit();
         }
         

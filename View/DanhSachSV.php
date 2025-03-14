@@ -41,9 +41,6 @@ if(isset($_GET['status'])) {
     $modalId = '';
     
     switch($status) {
-        case 'success':
-            $modalId = 'xoaTC';
-            break;
         case 'not_exist':
         case 'error_db':
             $modalId = 'Loixoa';
@@ -90,7 +87,8 @@ $studentList = $studentController->getStudents();
             // Lấy danh sách sinh viên từ database
             include_once("Model/clsStudent.php");
             $student = new clsStudent();
-            $result = $student->getStudents(); 
+            $result = $student->getStudents(); // Bạn cần thêm method này vào class clsStudent
+            
             if ($result->num_rows > 0) {
                 $stt = 1;
                 while($row = $result->fetch_assoc()) {
@@ -149,21 +147,6 @@ $studentList = $studentController->getStudents();
     </div>
 </div>
 
-<!-- Modal Thông báo xóa thành công -->
-<div class="modal fade" id="xoaTC" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0 justify-content-center">
-                <h5 class="modal-title fw-bold">Thông báo</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center">
-                <p class="fw-bold">Xóa thành công</p>
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- Modal Lỗi! Không thể xóa -->
 <div class="modal fade" id="Loixoa" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -191,25 +174,5 @@ document.addEventListener("DOMContentLoaded", function() {
             confirmDelete.href = "index.php?act=xoaSV&mssv=" + mssv;
         });
     });
-    
-    // Hiển thị thông báo dựa trên status sau khi xóa
-    <?php if(isset($_GET['status'])) { ?>
-        let status = "<?php echo $_GET['status']; ?>";
-        if(status === "success") {
-            let xoaTC = new bootstrap.Modal(document.getElementById('xoaTC'));
-            xoaTC.show();
-            // Tự động đóng modal sau 2 giây
-            setTimeout(function() {
-                xoaTC.hide();
-            }, 2000);
-        } else if(status === "error_db" || status === "not_exist") {
-            let loiXoa = new bootstrap.Modal(document.getElementById('Loixoa'));
-            loiXoa.show();
-            // Tự động đóng modal sau 2 giây
-            setTimeout(function() {
-                loiXoa.hide();
-            }, 2000);
-        }
-    <?php } ?>
 });
 </script>
