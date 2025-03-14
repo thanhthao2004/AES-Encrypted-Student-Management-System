@@ -1,4 +1,5 @@
 <?php 
+    include_once('Model/mStudent.php');
     class cStudent{
         public function addStudent($mssv, $hoTen, $ngaySinh, $gioiTinh, $lopDN) {
             $p = new clsStudent();
@@ -33,6 +34,7 @@
         
             if ($result == 1) {
                 header("Location: index.php?act=danhSachSV&status=success"); // Xóa thành công
+                header("Location: index.php");
             } else if ($result == 2) {
                 header("Location: index.php?act=danhSachSV&status=not_exist"); // MSSV không tồn tại
             } else {

@@ -90,8 +90,7 @@ $studentList = $studentController->getStudents();
             // Lấy danh sách sinh viên từ database
             include_once("Model/clsStudent.php");
             $student = new clsStudent();
-            $result = $student->getStudents(); // Bạn cần thêm method này vào class clsStudent
-            
+            $result = $student->getStudents(); 
             if ($result->num_rows > 0) {
                 $stt = 1;
                 while($row = $result->fetch_assoc()) {

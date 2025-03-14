@@ -1,4 +1,5 @@
 <?php 
+    include_once('mConnect.php');
     class clsStudent{
         public function addStudent($mssv, $hoTen, $ngaySinh, $gioiTinh, $lopDN) {
             $p = new clsConnect();
