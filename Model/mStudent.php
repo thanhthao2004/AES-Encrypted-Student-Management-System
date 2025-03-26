@@ -35,7 +35,7 @@
         
             // Xóa sinh viên
             $query = "DELETE FROM sinhvien WHERE mssv = '$mssv'";
-            if ($conn->query($query) === TRUE) {
+            if ($conn->query($query)) {
                 $p->mClose($conn);
                 return 1; // Xóa thành công
             } else {
