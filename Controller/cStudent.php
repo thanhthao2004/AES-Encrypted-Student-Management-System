@@ -23,10 +23,10 @@
                 showAlert('Xóa sinh viên thành công!', 'warning');
                 setTimeout(2000);
             </script>"; // Xóa thành công
+            header('Location: index.php');
             } else {
                 header("Location: index.php?act=danhSachSV&status=error_db"); // Lỗi CSDL
             }
-            header('Location: index.php');
             exit();
         }
         
