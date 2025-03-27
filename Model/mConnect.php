@@ -2,9 +2,9 @@
     class clsConnect {
         public function mOpen() {
             $host = 'localhost';
-            $userName = 'giangvien';
+            $userName = 'giangvien1';
             $password = 'giangvien123';
-            $db = 'quanlysinhvien';
+            $db = 'quanli';
 
             $conn =  mysqli_connect($host, $userName, $password, $db);
             if (!$conn) {
